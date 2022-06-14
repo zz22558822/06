@@ -375,7 +375,7 @@ html,body{
 
                 background: rgba(255,255,255,0.3);
 
-                // 依大小來自動推擠RWD
+                // 依大小來自動推擠RWD 額外使用 1780~1775來滿足2F 電視牆
                 @include mobile-1850{
                     font-size: 110px;
                 }

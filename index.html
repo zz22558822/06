@@ -7,8 +7,11 @@
     <link rel="icon" href="images/dashboard.png">
 
     <!-- 防止瀏覽器使用快取 正常來說應該是會直接資料異動後刷新狀態200 否則從快取304 -->
-    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
-    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <!-- <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> -->
+    <!-- 完全防止快取、每次連線都從Server拿取資料 -->
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-store">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store">
     <meta HTTP-EQUIV="Expires" CONTENT="0">
 
     <meta name="author" content="chek">

@@ -46,8 +46,8 @@ function getDay() {
 
 // 獲取資料 本地端 JSON檔案
 function getData() {
-    // 讀取本地之JSON檔
-    fetch("./SimisOnProgress.json")
+    // 讀取本地之JSON檔 添加引數為當前時間達成檔案不重複的效果來杜絕快取
+    fetch("./SimisOnProgress.json?version="+(new Date()).getTime())
     .then(response => {
         if (response.ok) {
             // 資料存在就為 1
@@ -298,8 +298,8 @@ setInterval("updata()","10000");
 // 10秒更新資料的手法
 function updata() {
     let upSwitch = 0
-    // 讀取本地之JSON檔
-    fetch("./SimisOnProgress.json")
+    // 讀取本地之JSON檔 添加引數為當前時間達成檔案不重複的效果來杜絕快取
+    fetch("./SimisOnProgress.json?version="+(new Date()).getTime())
     .then(response => {
         if (response.ok) {
             // 資料存在就為 1
